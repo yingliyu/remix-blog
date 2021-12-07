@@ -1,6 +1,12 @@
+/*
+ * @Author: ylyu
+ * @Date: 2021-12-06 15:32:56
+ * @LastEditors: ylyu
+ * @LastEditTime: 2021-12-07 16:39:03
+ * @Description:
+ */
 import type { MetaFunction, LoaderFunction } from 'remix'
 import { useLoaderData, json, Link } from 'remix'
-
 type IndexData = {
   resources: Array<{ name: string; url: string }>
   demos: Array<{ name: string; to: string }>
@@ -62,20 +68,8 @@ export default function Index() {
     <div className="remix__page">
       <main>
         <h2>Welcome to Remix!</h2>
-        <p>We're stoked that you're here. 🥳</p>
-        <p>
-          Feel free to take a look around the code to see how Remix does things,
-          it might be a bit different than what you’re used to. When you're
-          ready to dive deeper, we've got plenty of resources to get you
-          up-and-running quickly.
-        </p>
-        <p>
-          Check out all the demos in this starter, and then just delete the{' '}
-          <code>app/routes/demos</code> and <code>app/styles/demos</code>{' '}
-          folders when you're ready to turn this into your next project.
-        </p>
       </main>
-      <aside>
+      {/* <aside>
         <h2>Demos In This App</h2>
         <ul>
           {data.demos.map((demo) => (
@@ -94,7 +88,7 @@ export default function Index() {
             </li>
           ))}
         </ul>
-      </aside>
+      </aside> */}
     </div>
   )
 }

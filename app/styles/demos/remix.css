@@ -23,8 +23,9 @@
 }
 
 .remix-app__header-home-link {
-  width: 106px;
+  width: 306px;
   height: 30px;
+  margin: 0;
   color: var(--color-foreground);
 }
 
