@@ -2,21 +2,25 @@
  * @Author: ylyu
  * @Date: 2021-12-06 17:25:31
  * @LastEditors: ylyu
- * @LastEditTime: 2021-12-06 17:52:40
+ * @LastEditTime: 2021-12-07 15:20:47
  * @Description:
  */
 import { Outlet, Link, useLoaderData } from 'remix'
+
 import { getPosts } from '~/post'
 import type { Post } from '~/post'
 import adminStyles from '~/styles/admin.css'
-export const loader = () => {
-  return getPosts()
-}
-export const links = () => {
+
+export let links = () => {
   return [{ rel: 'stylesheet', href: adminStyles }]
 }
+
+export let loader = () => {
+  return getPosts()
+}
+
 export default function Admin() {
-  const posts = useLoaderData<Post[]>()
+  let posts = useLoaderData<Post[]>()
   return (
     <div className="admin">
       <nav>

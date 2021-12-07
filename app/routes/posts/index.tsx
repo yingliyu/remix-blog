@@ -2,21 +2,20 @@
  * @Author: ylyu
  * @Date: 2021-12-06 15:42:00
  * @LastEditors: ylyu
- * @LastEditTime: 2021-12-06 17:44:38
- * @Description: posts
+ * @LastEditTime: 2021-12-07 15:21:11
+ * @Description:
  */
-
 import { Link, useLoaderData } from 'remix'
+
 import { getPosts } from '~/post'
 import type { Post } from '~/post'
 
-// export const loader = () => {
-//   return getPosts()
-// }
+export let loader = () => {
+  return getPosts()
+}
 
 export default function Posts() {
-  const posts = useLoaderData<Post[]>()
-  console.log(posts)
+  let posts = useLoaderData<Post[]>()
   return (
     <div>
       <h1>Posts</h1>

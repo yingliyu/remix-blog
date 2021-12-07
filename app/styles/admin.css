@@ -12,6 +12,10 @@
   padding-left: 2rem;
 }
 
+textarea {
+  width: 100%;
+}
+
 em {
   color: red;
 }
